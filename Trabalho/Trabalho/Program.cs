@@ -11,6 +11,7 @@ namespace Trabalho
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// //teste
         [STAThread]
         static void Main()
         {
