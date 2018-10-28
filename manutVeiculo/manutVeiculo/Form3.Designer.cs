@@ -28,142 +28,198 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gpbOs = new System.Windows.Forms.GroupBox();
-            this.lvOs = new System.Windows.Forms.ListView();
-            this.columnTroca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnPeca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnKm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnValor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtOs = new System.Windows.Forms.TextBox();
-            this.lbOs = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnFinalizar = new System.Windows.Forms.Button();
-            this.gpbOs.SuspendLayout();
+            this.lbCombustivel = new System.Windows.Forms.Label();
+            this.lbCor = new System.Windows.Forms.Label();
+            this.lbPlaca = new System.Windows.Forms.Label();
+            this.lbAno = new System.Windows.Forms.Label();
+            this.lbModelo = new System.Windows.Forms.Label();
+            this.gpbVeiculo = new System.Windows.Forms.GroupBox();
+            this.txtKmRodado = new System.Windows.Forms.TextBox();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.txtCor = new System.Windows.Forms.TextBox();
+            this.txtAno = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.lbKm = new System.Windows.Forms.Label();
+            this.dudCombustivel = new System.Windows.Forms.DomainUpDown();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnCancelarCad = new System.Windows.Forms.Button();
+            this.gpbVeiculo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gpbOs
+            // lbCombustivel
             // 
-            this.gpbOs.Controls.Add(this.lvOs);
-            this.gpbOs.Controls.Add(this.btnBuscar);
-            this.gpbOs.Controls.Add(this.txtOs);
-            this.gpbOs.Controls.Add(this.lbOs);
-            this.gpbOs.Location = new System.Drawing.Point(7, 11);
-            this.gpbOs.Name = "gpbOs";
-            this.gpbOs.Size = new System.Drawing.Size(522, 262);
-            this.gpbOs.TabIndex = 1;
-            this.gpbOs.TabStop = false;
-            this.gpbOs.Text = "Ordem de Serviço";
+            this.lbCombustivel.AutoSize = true;
+            this.lbCombustivel.Location = new System.Drawing.Point(20, 79);
+            this.lbCombustivel.Name = "lbCombustivel";
+            this.lbCombustivel.Size = new System.Drawing.Size(69, 13);
+            this.lbCombustivel.TabIndex = 4;
+            this.lbCombustivel.Text = "Combustível:";
             // 
-            // lvOs
+            // lbCor
             // 
-            this.lvOs.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.lvOs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnTroca,
-            this.columnPeca,
-            this.columnKm,
-            this.columnValor});
-            this.lvOs.HoverSelection = true;
-            this.lvOs.Location = new System.Drawing.Point(26, 79);
-            this.lvOs.Name = "lvOs";
-            this.lvOs.Size = new System.Drawing.Size(467, 170);
-            this.lvOs.TabIndex = 8;
-            this.lvOs.UseCompatibleStateImageBehavior = false;
-            this.lvOs.View = System.Windows.Forms.View.Details;
+            this.lbCor.AutoSize = true;
+            this.lbCor.Location = new System.Drawing.Point(63, 131);
+            this.lbCor.Name = "lbCor";
+            this.lbCor.Size = new System.Drawing.Size(26, 13);
+            this.lbCor.TabIndex = 3;
+            this.lbCor.Text = "Cor:";
             // 
-            // columnTroca
+            // lbPlaca
             // 
-            this.columnTroca.Text = "Troca";
-            this.columnTroca.Width = 111;
+            this.lbPlaca.AutoSize = true;
+            this.lbPlaca.Location = new System.Drawing.Point(320, 79);
+            this.lbPlaca.Name = "lbPlaca";
+            this.lbPlaca.Size = new System.Drawing.Size(37, 13);
+            this.lbPlaca.TabIndex = 2;
+            this.lbPlaca.Text = "Placa:";
             // 
-            // columnPeca
+            // lbAno
             // 
-            this.columnPeca.Text = "Peça";
-            this.columnPeca.Width = 135;
+            this.lbAno.AutoSize = true;
+            this.lbAno.Location = new System.Drawing.Point(328, 31);
+            this.lbAno.Name = "lbAno";
+            this.lbAno.Size = new System.Drawing.Size(29, 13);
+            this.lbAno.TabIndex = 1;
+            this.lbAno.Text = "Ano:";
             // 
-            // columnKm
+            // lbModelo
             // 
-            this.columnKm.Text = "Km";
-            this.columnKm.Width = 94;
+            this.lbModelo.AutoSize = true;
+            this.lbModelo.Location = new System.Drawing.Point(9, 31);
+            this.lbModelo.Name = "lbModelo";
+            this.lbModelo.Size = new System.Drawing.Size(80, 13);
+            this.lbModelo.TabIndex = 0;
+            this.lbModelo.Text = "Marca/Modelo:";
             // 
-            // columnValor
+            // gpbVeiculo
             // 
-            this.columnValor.Text = "Valor";
-            this.columnValor.Width = 123;
+            this.gpbVeiculo.Controls.Add(this.dudCombustivel);
+            this.gpbVeiculo.Controls.Add(this.txtKmRodado);
+            this.gpbVeiculo.Controls.Add(this.txtPlaca);
+            this.gpbVeiculo.Controls.Add(this.txtCor);
+            this.gpbVeiculo.Controls.Add(this.txtAno);
+            this.gpbVeiculo.Controls.Add(this.txtMarca);
+            this.gpbVeiculo.Controls.Add(this.lbKm);
+            this.gpbVeiculo.Controls.Add(this.lbCombustivel);
+            this.gpbVeiculo.Controls.Add(this.lbCor);
+            this.gpbVeiculo.Controls.Add(this.lbPlaca);
+            this.gpbVeiculo.Controls.Add(this.lbAno);
+            this.gpbVeiculo.Controls.Add(this.lbModelo);
+            this.gpbVeiculo.Location = new System.Drawing.Point(12, 12);
+            this.gpbVeiculo.Name = "gpbVeiculo";
+            this.gpbVeiculo.Size = new System.Drawing.Size(513, 169);
+            this.gpbVeiculo.TabIndex = 9;
+            this.gpbVeiculo.TabStop = false;
+            this.gpbVeiculo.Text = "Informações do Veículo";
             // 
-            // btnBuscar
+            // txtKmRodado
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(319, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.txtKmRodado.Location = new System.Drawing.Point(363, 126);
+            this.txtKmRodado.Name = "txtKmRodado";
+            this.txtKmRodado.Size = new System.Drawing.Size(133, 20);
+            this.txtKmRodado.TabIndex = 15;
             // 
-            // txtOs
+            // txtPlaca
             // 
-            this.txtOs.Location = new System.Drawing.Point(171, 41);
-            this.txtOs.Name = "txtOs";
-            this.txtOs.Size = new System.Drawing.Size(127, 20);
-            this.txtOs.TabIndex = 3;
+            this.txtPlaca.Location = new System.Drawing.Point(363, 72);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(133, 20);
+            this.txtPlaca.TabIndex = 14;
             // 
-            // lbOs
+            // txtCor
             // 
-            this.lbOs.AutoSize = true;
-            this.lbOs.Location = new System.Drawing.Point(190, 25);
-            this.lbOs.Name = "lbOs";
-            this.lbOs.Size = new System.Drawing.Size(83, 13);
-            this.lbOs.TabIndex = 0;
-            this.lbOs.Text = "Número da O.S.";
+            this.txtCor.Location = new System.Drawing.Point(95, 126);
+            this.txtCor.Name = "txtCor";
+            this.txtCor.Size = new System.Drawing.Size(187, 20);
+            this.txtCor.TabIndex = 12;
             // 
-            // btnCancelar
+            // txtAno
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(326, 298);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 33);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.txtAno.Location = new System.Drawing.Point(363, 27);
+            this.txtAno.Name = "txtAno";
+            this.txtAno.Size = new System.Drawing.Size(133, 20);
+            this.txtAno.TabIndex = 11;
             // 
-            // btnFinalizar
+            // txtMarca
             // 
-            this.btnFinalizar.Location = new System.Drawing.Point(127, 298);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(75, 33);
-            this.btnFinalizar.TabIndex = 4;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.txtMarca.Location = new System.Drawing.Point(95, 24);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(187, 20);
+            this.txtMarca.TabIndex = 10;
+            // 
+            // lbKm
+            // 
+            this.lbKm.AutoSize = true;
+            this.lbKm.Location = new System.Drawing.Point(294, 133);
+            this.lbKm.Name = "lbKm";
+            this.lbKm.Size = new System.Drawing.Size(63, 13);
+            this.lbKm.TabIndex = 5;
+            this.lbKm.Text = "Km/rodado:";
+            // 
+            // dudCombustivel
+            // 
+            this.dudCombustivel.Items.Add("");
+            this.dudCombustivel.Items.Add("Gasolina");
+            this.dudCombustivel.Items.Add("Etanol");
+            this.dudCombustivel.Items.Add("Flex");
+            this.dudCombustivel.Items.Add("Diesel");
+            this.dudCombustivel.Location = new System.Drawing.Point(95, 72);
+            this.dudCombustivel.Name = "dudCombustivel";
+            this.dudCombustivel.Size = new System.Drawing.Size(187, 20);
+            this.dudCombustivel.TabIndex = 16;
+            this.dudCombustivel.Text = "Selecione...";
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Location = new System.Drawing.Point(156, 200);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(75, 33);
+            this.btnConfirmar.TabIndex = 10;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelarCad
+            // 
+            this.btnCancelarCad.Location = new System.Drawing.Point(343, 200);
+            this.btnCancelarCad.Name = "btnCancelarCad";
+            this.btnCancelarCad.Size = new System.Drawing.Size(75, 33);
+            this.btnCancelarCad.TabIndex = 11;
+            this.btnCancelarCad.Text = "Cancelar";
+            this.btnCancelarCad.UseVisualStyleBackColor = true;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 354);
-            this.Controls.Add(this.gpbOs);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnFinalizar);
+            this.ClientSize = new System.Drawing.Size(536, 244);
+            this.Controls.Add(this.btnCancelarCad);
+            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.gpbVeiculo);
             this.MaximizeBox = false;
             this.Name = "Form3";
             this.Text = "Form3";
-            this.gpbOs.ResumeLayout(false);
-            this.gpbOs.PerformLayout();
+            this.gpbVeiculo.ResumeLayout(false);
+            this.gpbVeiculo.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gpbOs;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnFinalizar;
-        private System.Windows.Forms.TextBox txtOs;
-        private System.Windows.Forms.Label lbOs;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.ListView lvOs;
-        private System.Windows.Forms.ColumnHeader columnTroca;
-        private System.Windows.Forms.ColumnHeader columnPeca;
-        private System.Windows.Forms.ColumnHeader columnKm;
-        private System.Windows.Forms.ColumnHeader columnValor;
+        private System.Windows.Forms.Label lbCombustivel;
+        private System.Windows.Forms.Label lbCor;
+        private System.Windows.Forms.Label lbPlaca;
+        private System.Windows.Forms.Label lbAno;
+        private System.Windows.Forms.Label lbModelo;
+        private System.Windows.Forms.GroupBox gpbVeiculo;
+        private System.Windows.Forms.TextBox txtKmRodado;
+        private System.Windows.Forms.TextBox txtPlaca;
+        private System.Windows.Forms.TextBox txtCor;
+        private System.Windows.Forms.TextBox txtAno;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.Label lbKm;
+        private System.Windows.Forms.DomainUpDown dudCombustivel;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnCancelarCad;
     }
 }

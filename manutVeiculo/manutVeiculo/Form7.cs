@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace manutVeiculo
 {
-    public partial class formPesquisar : Form
+    public partial class Form7 : Form
     {
-        public formPesquisar()
+        public Form7()
         {
             InitializeComponent();
         }
 
-        private void formPesquisar_Load(object sender, EventArgs e)
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
