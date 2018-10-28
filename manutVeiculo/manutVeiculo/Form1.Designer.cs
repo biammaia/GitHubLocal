@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPesquisar));
             this.gbCliente = new System.Windows.Forms.GroupBox();
-            this.lbNome = new System.Windows.Forms.Label();
-            this.lbCpf = new System.Windows.Forms.Label();
-            this.listCliente = new System.Windows.Forms.ListBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lbCpf = new System.Windows.Forms.Label();
+            this.lbNome = new System.Windows.Forms.Label();
             this.btnNovo = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.gbCliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,45 +56,14 @@
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Cliente";
             // 
-            // lbNome
+            // btnCancelar
             // 
-            this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(19, 36);
-            this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(41, 13);
-            this.lbNome.TabIndex = 0;
-            this.lbNome.Text = "Nome: ";
-            // 
-            // lbCpf
-            // 
-            this.lbCpf.AutoSize = true;
-            this.lbCpf.Location = new System.Drawing.Point(19, 77);
-            this.lbCpf.Name = "lbCpf";
-            this.lbCpf.Size = new System.Drawing.Size(33, 13);
-            this.lbCpf.TabIndex = 1;
-            this.lbCpf.Text = "CPF: ";
-            // 
-            // listCliente
-            // 
-            this.listCliente.FormattingEnabled = true;
-            this.listCliente.Location = new System.Drawing.Point(12, 149);
-            this.listCliente.Name = "listCliente";
-            this.listCliente.Size = new System.Drawing.Size(470, 82);
-            this.listCliente.TabIndex = 3;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(76, 29);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(278, 20);
-            this.txtNome.TabIndex = 2;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(76, 74);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(278, 20);
-            this.txtCpf.TabIndex = 3;
+            this.btnCancelar.Location = new System.Drawing.Point(377, 68);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 33);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -105,14 +74,37 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
+            // txtCpf
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(377, 68);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 33);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.txtCpf.Location = new System.Drawing.Point(76, 74);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(278, 20);
+            this.txtCpf.TabIndex = 3;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(76, 29);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(278, 20);
+            this.txtNome.TabIndex = 2;
+            // 
+            // lbCpf
+            // 
+            this.lbCpf.AutoSize = true;
+            this.lbCpf.Location = new System.Drawing.Point(19, 77);
+            this.lbCpf.Name = "lbCpf";
+            this.lbCpf.Size = new System.Drawing.Size(33, 13);
+            this.lbCpf.TabIndex = 1;
+            this.lbCpf.Text = "CPF: ";
+            // 
+            // lbNome
+            // 
+            this.lbNome.AutoSize = true;
+            this.lbNome.Location = new System.Drawing.Point(19, 36);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(41, 13);
+            this.lbNome.TabIndex = 0;
+            this.lbNome.Text = "Nome: ";
             // 
             // btnNovo
             // 
@@ -122,14 +114,23 @@
             this.btnNovo.TabIndex = 4;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(12, 132);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(470, 97);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // formPesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 286);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.listCliente);
             this.Controls.Add(this.gbCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -152,8 +153,8 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lbCpf;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.ListBox listCliente;
         private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 

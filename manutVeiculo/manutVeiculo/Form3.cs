@@ -16,5 +16,18 @@ namespace manutVeiculo
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja cancelar essa operação?", "Confirmação",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                //
+            }
+            else
+            {
+                this.Close();
+            }
+        }
     }
 }

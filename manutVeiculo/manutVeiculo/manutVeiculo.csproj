@@ -118,5 +118,8 @@
   <ItemGroup>
     <None Include="Resources\solicit_accept_check_ok_theaction_6340.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="kimpasta\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
