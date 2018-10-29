@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace manutVeiculo
 {
-    public partial class Form10 : Form
+    public partial class Form6 : Form
     {
-        public Form10()
+        public Form6()
         {
             InitializeComponent();
         }
 
-        private void Form10_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
